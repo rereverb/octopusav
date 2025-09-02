@@ -217,8 +217,16 @@ body {
     
     /* Hero (Video) */
     .hero-video-container {
-        height: 40vh;
+        height: 100vw; /* Esto creará un contenedor cuadrado */
     }
+
+    .hero-video {
+        object-fit: contain; /* El video se ajustará sin ser recortado */
+        /* Puedes eliminar object-position, ya que no será necesaria */
+    }
+
+    /* ... otros estilos para móviles ... */
+}
 
     /* Logo principal */
     .hero-logo {
