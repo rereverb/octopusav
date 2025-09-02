@@ -10,225 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
-    <style>
-        .related-projects-section {
-            text-align: center;
-            padding: 4rem 0;
-        }
-
-
-
-/* =====================================================
-/* # GALLERY-GRID */
-
-/* Disposición 1: Grande vertical a la izquierda (tu diseño original) */
-.gallery-grid-1 {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0.75rem;
-    margin-top: 2rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 60vh;
-}
-.gallery-grid-1 .grid-item-1 { grid-column: 1 / 2; grid-row: 1 / 3; }
-.gallery-grid-1 .grid-item-2 { grid-column: 2 / 4; grid-row: 1 / 2; }
-.gallery-grid-1 .grid-item-3 { grid-column: 2 / 3; grid-row: 2 / 3; }
-.gallery-grid-1 .grid-item-4 { grid-column: 3 / 4; grid-row: 2 / 3; }
-
-/* Disposición 2: Grande horizontal arriba */
-.gallery-grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    grid-gap: 0.75rem;
-    margin-top: 2rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 60vh;
-}
-.gallery-grid-2 .grid-item-1 { grid-column: 1 / 4; grid-row: 1 / 2; }
-.gallery-grid-2 .grid-item-2 { grid-column: 1 / 2; grid-row: 2 / 3; }
-.gallery-grid-2 .grid-item-3 { grid-column: 2 / 3; grid-row: 2 / 3; }
-.gallery-grid-2 .grid-item-4 { grid-column: 3 / 4; grid-row: 2 / 3; }
-
-/* Disposición 3: Cuatro imágenes iguales (2x2) */
-.gallery-grid-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0.75rem;
-    margin-top: 2rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 60vh;
-}
-.gallery-grid-3 .grid-item-1 { grid-column: 1 / 2; grid-row: 1 / 2; }
-.gallery-grid-3 .grid-item-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
-.gallery-grid-3 .grid-item-3 { grid-column: 1 / 2; grid-row: 2 / 3; }
-.gallery-grid-3 .grid-item-4 { grid-column: 2 / 3; grid-row: 2 / 3; }
-
-/* Disposición 4: Grande abajo y tres arriba */
-.gallery-grid-4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    grid-gap: 0.75rem;
-    margin-top: 2rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 60vh;
-}
-.gallery-grid-4 .grid-item-1 { grid-column: 1 / 2; grid-row: 1 / 2; }
-.gallery-grid-4 .grid-item-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
-.gallery-grid-4 .grid-item-3 { grid-column: 3 / 4; grid-row: 1 / 2; }
-.gallery-grid-4 .grid-item-4 { grid-column: 1 / 4; grid-row: 2 / 3; }
-
-/* Para que las imágenes se vean bien dentro del grid como fondo (regla general) */
-.gallery-grid-1 > div, .gallery-grid-2 > div, .gallery-grid-3 > div, .gallery-grid-4 > div {
-
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-
-}
-
-/* =====================================================
-
-
-
-        /* Estilos para el acordeón en la sección de contenido */
-        .post-content-section .accordion {
-            margin-top: 2rem;
-        }
-
-        /* Estilos para el listado de créditos */
-        .credits-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-
-        /* Estilo para cada línea de crédito (fila) */
-        .credits-list .credit-item {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 500px;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-            color: #ccc;
-        }
-
-        /* Alineación y espaciado de los elementos del crédito */
-        .credits-list .credit-item > span:first-child {
-            text-align: right;
-            width: 50%;
-            padding-right: 1.5rem;
-        }
-        
-        .credits-list .credit-item .credit-name {
-            text-align: left;
-            width: 50%;
-            padding-left: 1.5rem;
-        }
-
-        /* Estilo del contenedor del acordeón para que se integre con el fondo */
-.accordion {
-    --bs-accordion-bg: transparent;
-    --bs-accordion-border-color: rgba(255, 255, 255, 0.1);
-    --bs-accordion-btn-focus-box-shadow: none;
-    --bs-accordion-active-color: #fff;
-    --bs-accordion-btn-icon-color: #fff;
-    --bs-accordion-btn-icon-width: 1.5rem;
-}
-
-/* Estilo del botón del acordeón (el encabezado) */
-.accordion-button {
-    background-color: transparent !important;
-    color: #fff !important; /* Nuevo estilo para mejorar la legibilidad */
-    font-weight: bold;
-    font-size: 1.25rem;
-    padding: 1.5rem 1rem;
-}
-
-/* Estilo del cuerpo del acordeón (el contenido que se muestra) */
-.accordion-body {
-    background-color: var(--background_dark);
-    color: var(--foreground_light);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Cambia el color del icono de la flecha cuando el acordeón está abierto */
-.accordion-button:not(.collapsed) {
-    color: var(--syntax_cyan);
-}
-
-/* Color del icono del acordeón (la flecha) */
-.accordion-button::after {
-    filter: invert(1) grayscale(100%) brightness(200%); /* Hace la flecha blanca */
-}
-
-/* Color del icono del acordeón cuando está abierto */
-.accordion-button:not(.collapsed)::after {
-    filter: none;
-    color: var(--syntax_cyan);
-}
-
-/* Estilos para la leyenda y el modal */
-.modal-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-}
-
-/* Estilos para una tipografía más solemne y profesional */
-.solemn-heading {
-    font-size: 4rem; /* Tamaño grande para el título */
-    font-weight: 700; /* Negrita */
-    letter-spacing: 0.1em; /* Espaciado entre letras */
-    text-transform: uppercase; /* Todo en mayúsculas para un efecto dramático */
-    font-family: 'Coolvetica', sans-serif; /* Mantiene la fuente Coolvetica */
-}
-
-/* Estilos para los botones más grandes y resaltados */
-.btn-custom {
-    padding: 1rem 2.5rem; /* Aumenta el tamaño del padding */
-    border-width: 2px; /* Grosor del borde */
-    border-radius: 0; /* Sin bordes redondeados para un look más "afilado" */
-    transition: all 0.3s ease; /* Transición suave al pasar el ratón */
-    font-size: 1.5rem; /* Tamaño de fuente más grande */
-}
-
-.btn-custom:hover {
-    background-color: white;
-    color: black !important;
-}
-
-/* Títulos secundarios en mayúsculas y con menos opacidad */
-.text-uppercase {
-    letter-spacing: 0.05em;
-}
-
-/* Colores corporativos en el hover de los botones */
-.btn-imdb:hover {
-    background-color: #F5C518; /* Amarillo corporativo de IMDb */
-    border-color: #F5C518;
-    color: black !important; /* El !important es necesario para sobrescribir la regla general */
-}
-
-.btn-youtube:hover {
-    background-color: #FF0000; /* Rojo corporativo de YouTube */
-    border-color: #FF0000;
-    color: white !important;
-}
-
-</style>
 </head>
 <body>
 
@@ -237,11 +18,6 @@
 
 
     <div class="single-post-container">
-        
-
-
-
-
         <div class="related-projects-section p-0">
 
             <!-- $ NAVBAR SUPERPUESTA -->
@@ -269,7 +45,7 @@
 
             <div class="container-fluid pt-3">
                 <div class="gallery-grid-1">
-                    <div class="grid-item-1" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Cartel_Fuga.jpg" style="background-image: url('assets/fuga/Cartel_Fuga.jpg');" aria-label="Descripción de la imagen 1" role="button"></div>
+                    <div class="grid-item-1 grid-poster" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Cartel_Fuga.jpg" style="background-image: url('assets/fuga/Cartel_Fuga.jpg');" aria-label="Descripción de la imagen 1" role="button"></div>
                     <div class="grid-item-2" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Fotograma_Fuga_1.png" style="background-image: url('assets/fuga/Fotograma_Fuga_1.png');" aria-label="Descripción de la imagen 2" role="button"></div>
                     <div class="grid-item-3" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Fotograma_Fuga_2.png" style="background-image: url('assets/fuga/Fotograma_Fuga_2.png');" aria-label="Descripción de la imagen 3" role="button"></div>
                     <div class="grid-item-4" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Fotograma_Fuga_3.png" style="background-image: url('assets/fuga/Fotograma_Fuga_3.png');" aria-label="Descripción de la imagen 4" role="button"></div>
@@ -396,33 +172,36 @@
             <p class="lead">Si tienes alguna pregunta o proyecto en mente, no dudes en contactarnos.</p>
 
             <!-- $ CORREO ELECTRÓNICO -->
-            <div class="contact-info my-4">
+            <div class="contact-info my-2">
                 <p>
                     <a href="mailto:octopusprod@gmail.com" class="contact-link text-white text-decoration-none">
                         <i class="bi bi-envelope-fill"></i>
                         octopusprod@gmail.com
                     </a>
                 </p>
+                <div class="link-line mt-2 mb-2">
+                    <a href="https://www.youtube.com/" target="_blank" class="btn btn-outline-light btn-custom btn-small btn-youtube me-3">
+                        <i class="bi bi-youtube me-2"></i>YouTube
+                    </a>
+                    <a href="https://www.imdb.com/" target="_blank" class="btn btn-outline-light btn-custom btn-small btn-imdb me-3">
+                        <i class="bi bi-film me-2"></i>IMDb
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline-light btn-custom btn-small btn-linkedin me-3">
+                        <i class="bi bi-linkedin me-2"></i>LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="btn btn-outline-light btn-custom btn-small btn-instagram me-3">
+                        <i class="bi bi-instagram me-2"></i>Instagram
+                    </a>
+                </div>
             </div>
 
-            <!-- $ RRSS -->
-            <div class="social-icons mb-4">
-                <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube" class="text-white text-decoration-none me-3">
-                    <i class="bi bi-youtube"></i>
-                </a>
-                <a href="https://www.imdb.com/" target="_blank" aria-label="IMDb" class="text-white text-decoration-none me-3">
-                    <i class="bi bi-film"></i>
-                </a>
-                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn" class="text-white text-decoration-none me-3">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="text-white text-decoration-none">
-                    <i class="bi bi-instagram"></i>
-                </a>
-            </div>
 
+
+            
+        
         </div>
     </section>
+
 
 
 <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">

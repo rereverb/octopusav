@@ -1,0 +1,306 @@
+/*
+Theme Name: OctopusAV de Lara
+Theme URI: https://botega.co.uk
+Author: Álvaro Lara
+Author URI: https://botega.co.uk
+Description: Basic WordPress theme for Sitepoint theme building tutorial
+Text Domain: bsimple
+Version: 1.0.0
+License: GNU General Public License v2 or later
+*/
+
+/*!
+* Start Bootstrap - Grayscale v7.0.6 (https://startbootstrap.com/theme/grayscale)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
+*/
+/*!
+* Bootstrap  v5.2.3 (https://getbootstrap.com/)
+* Copyright 2011-2022 The Bootstrap Authors
+* Copyright 2011-2022 Twitter, Inc.
+* Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+*/
+
+@charset "UTF-8";
+
+body {
+    color: white;
+    font-family: 'Coolvetica', sans-serif;
+    background-color: #121212;
+    /*background-color: #070014;*/
+}
+
+/* ## TIPOGRAFÍA GENERAL ## */
+
+/* Estilos de encabezados (Coolvetica) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Coolvetica', sans-serif;
+    color: white; /* Color por defecto para todos los títulos */
+    letter-spacing: 0.05em; /* Espaciado sutil para un toque más profesional */
+}
+
+h1 {
+    font-size: 3.5rem; /* El título más grande y principal de la página */
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2.5rem; /* Título de sección */
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 2rem; /* Subtítulo dentro de una sección */
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+h4 {
+    font-size: 1.5rem; /* Para subtítulos o títulos de tarjetas */
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 1.25rem; /* Títulos de menor jerarquía */
+    font-weight: 400;
+}
+
+h6 {
+    font-size: 1rem; /* Títulos de menor jerarquía, como la descripción de la película */
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Estilo para los párrafos */
+p {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Una fuente más legible para el cuerpo de texto */
+    font-size: 1rem;
+    line-height: 1.6; /* Mayor espaciado entre líneas para una mejor lectura */
+    color: rgba(255, 255, 255, 0.9); /* Un gris claro para suavizar el blanco */
+}
+
+
+/* ## SECCIÓN DE PROYECTOS (THUMBNAILS) ## */
+.thumbnail-hover {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.thumbnail-hover:hover {
+    cursor: pointer;
+}
+
+.thumbnail-hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="rgba(255,255,255,0.4)"/><rect x="2" y="2" width="2" height="2" fill="rgba(0,0,0,0.6)"/></svg>');
+    background-size: 4px 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.thumbnail-hover:hover::after {
+    opacity: 0.4;
+}
+
+/* ## SECCIÓN DE CONTACTO ## */
+.contact-gradient {
+    position: relative;
+}
+
+.contact-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, black 50%, transparent 100%);
+    z-index: 1;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+}
+
+.wp-block-gallery {
+    display: none !important;
+}
+
+/* Ajustes para el navbar superpuesto */
+.navbar-superpuesta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar.bg-dark {
+    background-color: transparent !important;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* ## SECCIÓN DE CONTACTO ## */
+.contact-section {
+    position: relative;
+    background-image: url('assets/portada/Contacto_Banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    color: #fff;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Estilo para los iconos de contacto y redes sociales */
+.contact-link,
+.social-icons a {
+    font-size: 1.5rem;
+}
+
+/* Espacio entre el ícono de correo y el texto */
+.contact-link i {
+    margin-right: 0.5rem;
+}
+
+/* ## MEDIA QUERIES PARA ADAPTACIÓN A DISPOSITIVOS ## */
+
+/* Estilos específicos para ESCRITORIO (a partir de 769px) */
+@media (min-width: 769px) {
+    .hero-video-container {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px; /* Espacio entre el logo y los premios */
+    }
+
+    .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .hero-content {
+        z-index: 2;
+        text-align: center;
+        color: white;
+    }
+
+    .hero-logo {
+        max-width: 50%;
+    }
+
+    .award-images-overlay {
+        z-index: 5;
+        display: flex;
+        gap: 15px;
+        align-items: flex-end;
+    }
+
+    .award-images-overlay .award-icon {
+        max-width: 150px;
+        height: auto;
+        filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+    }
+}
+
+/* Estilos específicos para MÓVILES (hasta 768px) */
+@media (max-width: 768px) {
+    .hero-video-container {
+        position: relative;
+        width: 100%;
+        height: 100vw;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+        z-index: -1;
+    }
+
+    .hero-content {
+        z-index: 2;
+        text-align: center;
+    }
+
+    .hero-logo {
+        max-width: 60%;
+    }
+
+    .award-images-overlay {
+        /* z-index: 5;
+        display: flex;
+        gap: 10px;
+        align-items: flex-end; */
+        display: none;
+    }
+
+    .award-images-overlay .award-icon {
+        max-width: 75px;
+    }
+
+    .contact-section {
+        height: 80vh;
+    }
+
+    .contact-section::before {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
+    }
+
+    .contact-content {
+        padding: 2rem 1rem;
+    }
+}

@@ -23,6 +23,11 @@ License: GNU General Public License v2 or later
 
 @charset "UTF-8";
 
+
+/*
+# BASE Y TIPOGRAFÍA */
+/*
+$ BASE */
 body {
     color: white;
     font-family: 'Coolvetica', sans-serif;
@@ -30,116 +35,149 @@ body {
     /*background-color: #070014;*/
 }
 
-/* ## TIPOGRAFÍA GENERAL ## */
-
-/* Estilos de encabezados (Coolvetica) */
+/*
+$ Estilos de encabezados */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Coolvetica', sans-serif;
-    color: white; /* Color por defecto para todos los títulos */
-    letter-spacing: 0.05em; /* Espaciado sutil para un toque más profesional */
+    color: white;
+    letter-spacing: 0.05em;
 }
-
 h1 {
-    font-size: 3.5rem; /* El título más grande y principal de la página */
+    font-size: 3.5rem;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
 }
-
 h2 {
-    font-size: 2.5rem; /* Título de sección */
+    font-size: 2.5rem;
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
-
 h3 {
-    font-size: 2rem; /* Subtítulo dentro de una sección */
+    font-size: 2rem;
     font-weight: 500;
     margin-top: 1.5rem;
 }
-
 h4 {
-    font-size: 1.5rem; /* Para subtítulos o títulos de tarjetas */
+    font-size: 1.5rem;
     font-weight: 500;
 }
-
 h5 {
-    font-size: 1.25rem; /* Títulos de menor jerarquía */
+    font-size: 1.25rem;
     font-weight: 400;
 }
-
 h6 {
-    font-size: 1rem; /* Títulos de menor jerarquía, como la descripción de la película */
+    font-size: 1rem;
     font-weight: 400;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Estilo para los párrafos */
+/*
+$ Estilos de párrafos */
 p {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Una fuente más legible para el cuerpo de texto */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
-    line-height: 1.6; /* Mayor espaciado entre líneas para una mejor lectura */
-    color: rgba(255, 255, 255, 0.9); /* Un gris claro para suavizar el blanco */
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-
-/* ## SECCIÓN DE PROYECTOS (THUMBNAILS) ## */
-.thumbnail-hover {
-    position: relative;
-    overflow: hidden;
-    display: block;
+/*
+$ Estilos de párrafos para los single */
+.solemn-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Coolvetica', sans-serif;
 }
 
-.thumbnail-hover:hover {
-    cursor: pointer;
+.text-uppercase {
+    letter-spacing: 0.05em;
 }
 
-.thumbnail-hover::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+/*
+$ Créditos de single */
+.credits-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 100%;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="rgba(255,255,255,0.4)"/><rect x="2" y="2" width="2" height="2" fill="rgba(0,0,0,0.6)"/></svg>');
-    background-size: 4px 4px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
 }
 
-.thumbnail-hover:hover::after {
-    opacity: 0.4;
+.credits-list .credit-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #ccc;
 }
 
-/* ## SECCIÓN DE CONTACTO ## */
-.contact-gradient {
-    position: relative;
-}
-
-.contact-gradient::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.credits-list .credit-item > span:first-child {
+    text-align: right;
     width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, black 50%, transparent 100%);
-    z-index: 1;
+    padding-right: 1.5rem;
 }
 
-.contact-content {
-    position: relative;
-    z-index: 2;
+.credits-list .credit-item .credit-name {
+    text-align: left;
+    width: 50%;
+    padding-left: 1.5rem;
 }
 
-.wp-block-gallery {
-    display: none !important;
+
+/*
+## COMPONENTES GENERALES*//*
+$ Botones */
+.btn-custom {
+    padding: 1rem 2.5rem;
+    border-width: 2px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
 }
 
-/* Ajustes para el navbar superpuesto */
+.btn-small {
+    padding: 0.25rem 0.5rem; /* Ajusta el relleno vertical y horizontal */
+    font-size: 0.875rem;     /* Ajusta el tamaño de la fuente */
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: black !important;
+}
+
+.btn-imdb:hover {
+    background-color: #F5C518;
+    border-color: #F5C518;
+    color: black !important;
+}
+
+.btn-linkedin:hover {
+    background-color: #0077B5;
+    border-color: #0077B5;
+    color: white !important;
+}
+
+.btn-instagram:hover {
+    background-image: linear-gradient(to right, #833ab4, #c13584, #e1306c, #fd1d1d);
+    color: white !important;
+}
+
+.btn-youtube:hover {
+    background-color: #FF0000;
+    border-color: #FF0000;
+    color: white !important;
+}
+
+
+
+/*
+## LAYOUT GENERAL*//*
+$ NAVBAR */
 .navbar-superpuesta {
     position: absolute;
     top: 0;
@@ -158,7 +196,51 @@ p {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-/* ## SECCIÓN DE CONTACTO ## */
+/*
+$ THUMBNAIL de proyectos */
+.thumbnail-hover {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.thumbnail-hover:hover { cursor: pointer; }
+
+.thumbnail-hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="rgba(255,255,255,0.4)"/><rect x="2" y="2" width="2" height="2" fill="rgba(0,0,0,0.6)"/></svg>');
+    background-size: 4px 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.thumbnail-hover:hover::after { opacity: 0.4; }
+
+/*
+$ SECCIÓN CONTACTO */
+.contact-gradient { position: relative; }
+
+.contact-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, black 50%, transparent 100%);
+    z-index: 1;
+}
+
+.contact-content { position: relative; z-index: 2; }
+
+.wp-block-gallery { display: none !important; }
+
 .contact-section {
     position: relative;
     background-image: url('assets/portada/Contacto_Banner.png');
@@ -181,20 +263,97 @@ p {
     pointer-events: none;
 }
 
-/* Estilo para los iconos de contacto y redes sociales */
 .contact-link,
-.social-icons a {
-    font-size: 1.5rem;
+.social-icons a { font-size: 1.5rem; }
+
+.contact-link i { margin-right: 0.5rem; }
+
+/* =====================================================
+   ## SECCIONES ESPECÍFICAS (FUGA, GALERÍA, ETC.)
+   ===================================================== */
+/*
+! esto podria cambiarse */
+/* Sección proyectos relacionados */
+.related-projects-section {
+    text-align: center;
+    padding: 4rem 0;
 }
 
-/* Espacio entre el ícono de correo y el texto */
-.contact-link i {
-    margin-right: 0.5rem;
+/*
+$ GALERÍAS */
+.gallery-grid-1, .gallery-grid-2, .gallery-grid-3, .gallery-grid-4 {
+    display: grid;
+    grid-gap: 0.75rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
 }
 
-/* ## MEDIA QUERIES PARA ADAPTACIÓN A DISPOSITIVOS ## */
+/* Disposición 1: Grande vertical a la izquierda */
+.gallery-grid-1 {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.gallery-grid-1 .grid-item-1 { grid-column: 1 / 2; grid-row: 1 / 3; }
+.gallery-grid-1 .grid-item-2 { grid-column: 2 / 4; grid-row: 1 / 2; }
+.gallery-grid-1 .grid-item-3 { grid-column: 2 / 3; grid-row: 2 / 3; }
+.gallery-grid-1 .grid-item-4 { grid-column: 3 / 4; grid-row: 2 / 3; }
 
-/* Estilos específicos para ESCRITORIO (a partir de 769px) */
+/* Disposición 2: Grande horizontal arriba */
+.gallery-grid-2 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+.gallery-grid-2 .grid-item-1 { grid-column: 1 / 4; grid-row: 1 / 2; }
+.gallery-grid-2 .grid-item-2 { grid-column: 1 / 2; grid-row: 2 / 3; }
+.gallery-grid-2 .grid-item-3 { grid-column: 2 / 3; grid-row: 2 / 3; }
+.gallery-grid-2 .grid-item-4 { grid-column: 3 / 4; grid-row: 2 / 3; }
+
+/* Disposición 3: 2x2 */
+.gallery-grid-3 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.gallery-grid-3 .grid-item-1 { grid-column: 1 / 2; grid-row: 1 / 2; }
+.gallery-grid-3 .grid-item-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
+.gallery-grid-3 .grid-item-3 { grid-column: 1 / 2; grid-row: 2 / 3; }
+.gallery-grid-3 .grid-item-4 { grid-column: 2 / 3; grid-row: 2 / 3; }
+
+/* Disposición 4: Grande abajo */
+.gallery-grid-4 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+.gallery-grid-4 .grid-item-1 { grid-column: 1 / 2; grid-row: 1 / 2; }
+.gallery-grid-4 .grid-item-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
+.gallery-grid-4 .grid-item-3 { grid-column: 3 / 4; grid-row: 1 / 2; }
+.gallery-grid-4 .grid-item-4 { grid-column: 1 / 4; grid-row: 2 / 3; }
+
+/* Ajustes visuales para imágenes en grid */
+.gallery-grid-1 > div, .gallery-grid-2 > div, .gallery-grid-3 > div, .gallery-grid-4 > div {
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.grid-poster {
+    grid-column: 1 / 2; /* Puedes ajustar la posición según tu diseño */
+    grid-row: 1 / 3;    /* Hace que el póster ocupe 2 filas */
+    height: 100%;       /* Ocupa toda la altura de las filas que le asignes */
+}
+
+/*
+$ MODAL DE FOTOGRAFÍAS DE LA GALERÍA*/
+.modal-footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+/*
+## MEDIA QUERIES*/
+/*
+$ GRANDES PANTALLAS*/
 @media (min-width: 769px) {
     .hero-video-container {
         position: relative;
@@ -205,7 +364,7 @@ p {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 20px; /* Espacio entre el logo y los premios */
+        gap: 20px;
     }
 
     .hero-video {
@@ -221,15 +380,8 @@ p {
         z-index: -1;
     }
 
-    .hero-content {
-        z-index: 2;
-        text-align: center;
-        color: white;
-    }
-
-    .hero-logo {
-        max-width: 50%;
-    }
+    .hero-content { z-index: 2; text-align: center; color: white; }
+    .hero-logo { max-width: 50%; }
 
     .award-images-overlay {
         z-index: 5;
@@ -244,8 +396,8 @@ p {
         filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
     }
 }
-
-/* Estilos específicos para MÓVILES (hasta 768px) */
+/*
+$ PEQUEÑAS PANTALLAS*/
 @media (max-width: 768px) {
     .hero-video-container {
         position: relative;
@@ -254,7 +406,6 @@ p {
         overflow: hidden;
         display: flex;
         justify-content: center;
-
         align-items: center;
         flex-direction: column;
         gap: 10px;
@@ -271,36 +422,44 @@ p {
         z-index: -1;
     }
 
-    .hero-content {
-        z-index: 2;
-        text-align: center;
-    }
+    .hero-content { z-index: 2; text-align: center; }
+    .hero-logo { max-width: 60%; }
 
-    .hero-logo {
-        max-width: 60%;
-    }
+    .award-images-overlay { display: none; }
 
-    .award-images-overlay {
-        /* z-index: 5;
-        display: flex;
-        gap: 10px;
-        align-items: flex-end; */
-        display: none;
-    }
+    .award-images-overlay .award-icon { max-width: 75px; }
 
-    .award-images-overlay .award-icon {
-        max-width: 75px;
-    }
-
-    .contact-section {
-        height: 80vh;
-    }
+    .contact-section { height: 80vh; }
 
     .contact-section::before {
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
     }
 
-    .contact-content {
-        padding: 2rem 1rem;
+    .contact-content { padding: 2rem 1rem; }
+
+    /* Resetea la altura para evitar deformación */
+    .gallery-grid-1, .gallery-grid-2, .gallery-grid-3, .gallery-grid-4 {
+        height: auto;
     }
+
+    /* Diseño de una sola columna para todas las galerías */
+    .gallery-grid-1, .gallery-grid-2, .gallery-grid-3, .gallery-grid-4 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* Asegura que cada imagen ocupe una fila completa */
+    .gallery-grid-1 > div, .gallery-grid-2 > div, .gallery-grid-3 > div, .gallery-grid-4 > div {
+        grid-column: 1 / 2 !important; /* Fuerza a que cada ítem esté en su propia columna */
+        grid-row: auto !important;     /* Permite que la altura se ajuste automáticamente */
+        height: 300px;                 /* Ajusta a una altura fija para móviles */
+    }
+
+    /* Nueva regla para que el póster tenga una altura fija en móviles */
+    .grid-poster {
+        height: 500px !important; /* Mantén una altura generosa */
+        background-size: contain !important; /* Asegura que la imagen completa se vea */
+        background-repeat: no-repeat !important; /* Evita que la imagen se repita */
+    }
+
 }
