@@ -91,8 +91,11 @@
 
 /* Para que las imágenes se vean bien dentro del grid como fondo (regla general) */
 .gallery-grid-1 > div, .gallery-grid-2 > div, .gallery-grid-3 > div, .gallery-grid-4 > div {
+
     background-size: cover;
     background-position: center;
+    cursor: pointer;
+
 }
 
 /* =====================================================
@@ -177,7 +180,14 @@
     filter: none;
     color: var(--syntax_cyan);
 }
-    </style>
+
+/* Estilos para la leyenda y el modal */
+.modal-footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+</style>
 </head>
 <body>
 
@@ -367,6 +377,69 @@
 
         </div>
     </section>
+
+
+<div class="container-fluid pb-4">
+    <div class="gallery-grid-2">
+        <div class="grid-item-1" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_1.jpg" style="background-image: url('assets/fuga/Making_Fuga_1.jpg');" aria-label="Descripción de la imagen 1" role="button"></div>
+        <div class="grid-item-2" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_2.jpg" style="background-image: url('assets/fuga/Making_Fuga_2.jpg');" aria-label="Descripción de la imagen 2" role="button"></div>
+        <div class="grid-item-3" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_4.jpg" style="background-image: url('assets/fuga/Making_Fuga_4.jpg');" aria-label="Descripción de la imagen 3" role="button"></div>
+        <div class="grid-item-4" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_3.jpg" style="background-image: url('assets/fuga/Making_Fuga_3.jpg');" aria-label="Descripción de la imagen 4" role="button"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-header border-0 p-3">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <img src="" class="img-fluid" id="modalImage" alt="Imagen ampliada de la galería">
+            </div>
+            <div class="modal-footer border-0">
+                <p id="modalLegend" class="text-white text-center w-100 mb-0"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var myModal = document.getElementById('galleryModal');
+        var modalImage = document.getElementById('modalImage');
+        var modalLegend = document.getElementById('modalLegend');
+        var modalFooter = document.querySelector('#galleryModal .modal-footer');
+
+        document.querySelectorAll('.gallery-grid-2 div[data-bs-toggle="modal"]').forEach(item => {
+            item.addEventListener('click', event => {
+                const imageSrc = event.currentTarget.getAttribute('data-image-src');
+                const imageLegend = event.currentTarget.getAttribute('aria-label');
+                
+                modalImage.src = imageSrc;
+
+                // Si el texto de la leyenda existe, lo muestra
+                if (imageLegend) {
+                    modalLegend.textContent = imageLegend;
+                    modalFooter.style.display = 'block'; // Muestra el footer
+                } else {
+                    // Si no, lo oculta
+                    modalLegend.textContent = '';
+                    modalFooter.style.display = 'none'; // Oculta el footer
+                }
+            });
+        });
+
+        // Limpia los valores cuando el modal se cierra para prepararlo para la próxima vez
+        myModal.addEventListener('hidden.bs.modal', function() {
+            modalImage.src = '';
+            modalLegend.textContent = '';
+            modalFooter.style.display = 'block'; // Vuelve a mostrar el footer por si acaso
+        });
+    });
+</script>
+
 
 </main>
 
