@@ -220,6 +220,7 @@ body {
         /* Para un video 1:1, la altura debe ser igual al ancho para un contenedor cuadrado */
 
         width: 100vw;
+        max-height: 60vh;
     }
 
     .hero-video {
