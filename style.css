@@ -30,6 +30,61 @@ body {
     /*background-color: #070014;*/
 }
 
+/* ## TIPOGRAFÍA GENERAL ## */
+
+/* Estilos de encabezados (Coolvetica) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Coolvetica', sans-serif;
+    color: white; /* Color por defecto para todos los títulos */
+    letter-spacing: 0.05em; /* Espaciado sutil para un toque más profesional */
+}
+
+h1 {
+    font-size: 3.5rem; /* El título más grande y principal de la página */
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2.5rem; /* Título de sección */
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 2rem; /* Subtítulo dentro de una sección */
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+h4 {
+    font-size: 1.5rem; /* Para subtítulos o títulos de tarjetas */
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 1.25rem; /* Títulos de menor jerarquía */
+    font-weight: 400;
+}
+
+h6 {
+    font-size: 1rem; /* Títulos de menor jerarquía, como la descripción de la película */
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Estilo para los párrafos */
+p {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Una fuente más legible para el cuerpo de texto */
+    font-size: 1rem;
+    line-height: 1.6; /* Mayor espaciado entre líneas para una mejor lectura */
+    color: rgba(255, 255, 255, 0.9); /* Un gris claro para suavizar el blanco */
+}
+
+
 /* ## SECCIÓN DE PROYECTOS (THUMBNAILS) ## */
 .thumbnail-hover {
     position: relative;

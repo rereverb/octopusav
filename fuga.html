@@ -187,6 +187,47 @@
     backdrop-filter: blur(5px);
 }
 
+/* Estilos para una tipografía más solemne y profesional */
+.solemn-heading {
+    font-size: 4rem; /* Tamaño grande para el título */
+    font-weight: 700; /* Negrita */
+    letter-spacing: 0.1em; /* Espaciado entre letras */
+    text-transform: uppercase; /* Todo en mayúsculas para un efecto dramático */
+    font-family: 'Coolvetica', sans-serif; /* Mantiene la fuente Coolvetica */
+}
+
+/* Estilos para los botones más grandes y resaltados */
+.btn-custom {
+    padding: 1rem 2.5rem; /* Aumenta el tamaño del padding */
+    border-width: 2px; /* Grosor del borde */
+    border-radius: 0; /* Sin bordes redondeados para un look más "afilado" */
+    transition: all 0.3s ease; /* Transición suave al pasar el ratón */
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: black !important;
+}
+
+/* Títulos secundarios en mayúsculas y con menos opacidad */
+.text-uppercase {
+    letter-spacing: 0.05em;
+}
+
+/* Colores corporativos en el hover de los botones */
+.btn-imdb:hover {
+    background-color: #F5C518; /* Amarillo corporativo de IMDb */
+    border-color: #F5C518;
+    color: black !important; /* El !important es necesario para sobrescribir la regla general */
+}
+
+.btn-youtube:hover {
+    background-color: #FF0000; /* Rojo corporativo de YouTube */
+    border-color: #FF0000;
+    color: white !important;
+}
+
 </style>
 </head>
 <body>
@@ -236,18 +277,23 @@
             </div>
         </div>
 
-        <div class="post-content-section pt-4" style="color:white;">
+        <div class="post-content-section pt-4">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h1>FUGA</h1>
-                        <h6>Drama-Comedia / 20' / 2025</h6>
-                        <p>Esto es una breve sinopsis</p>
+                        <h1 class="solemn-heading">FUGA</h1>
+                        <h6 class="text-uppercase" style="color:rgba(255,255,255,0.6);">Drama-Comedia / 20' / 2025</h6>
+                        <p>Viviendo alejado de todo en una aparente calma y monotonía, él recibe una visita que no esperaba nunca más, pero ¿realmente sabe quién es ella?</p>
 
-                        <div class="link-line mt-4 mb-4">
-                            <a href="https://www.imdb.com/title/ttXXXXXXX/" target="_blank" class="text-white text-decoration-none me-3" style="color:white; text-decoration: none;"><i class="bi bi-film me-1"></i>imdb</a>
-                            <a href="https://www.imdb.com/title/ttXXXXXXX/" target="_blank" class="text-white text-decoration-none me-3" style="color:white; text-decoration: none;"><i class="bi bi-youtube me-1"></i>YouTube</a>
+                        <div class="link-line mt-5 mb-4">
+                            <a href="https://www.imdb.com/title/ttXXXXXXX/" target="_blank" class="btn btn-outline-light btn-custom me-3 btn-imdb">
+                                <i class="bi bi-film me-2"></i>IMDb
+                            </a>
+                            <a href="https://www.imdb.com/title/ttXXXXXXX/" target="_blank" class="btn btn-outline-light btn-custom btn-youtube">
+                                <i class="bi bi-youtube me-2"></i>YouTube
+                            </a>
                         </div>
+
 
 
 
