@@ -30,20 +30,16 @@ body {
 }
 
 /* ## SECCIÓN DE PROYECTOS (THUMBNAILS) ## */
-/* Modificación del efecto hover */
-/* APLICA ESTAS REGLAS AL CONTENEDOR 'A' */
 .thumbnail-hover {
-    position: relative; /* Es necesario para posicionar el pseudo-elemento */
-    overflow: hidden; /* Para que el granulado no se salga de los bordes */
-    display: block; /* Asegura que el enlace se comporte como un bloque */
+    position: relative;
+    overflow: hidden;
+    display: block;
 }
 
-/* Elimina el efecto de zoom del A:hover */
 .thumbnail-hover:hover {
     cursor: pointer;
 }
 
-/* Pseudo-elemento para el granulado más visible (CINEMATOGRÁFICO / ARTE POP) */
 .thumbnail-hover::after {
     content: "";
     position: absolute;
@@ -51,23 +47,22 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Nuevo patrón de puntos finos para el granulado */
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="rgba(255,255,255,0.4)"/><rect x="2" y="2" width="2" height="2" fill="rgba(0,0,0,0.6)"/></svg>');
-    background-size: 4px 4px; /* Tamaño del patrón */
-    opacity: 0; /* Por defecto, el granulado es invisible */
-    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
-    pointer-events: none; /* No bloquea los clics en la imagen */
+    background-size: 4px 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
-/* Muestra el granulado al pasar el ratón por encima */
 .thumbnail-hover:hover::after {
-    opacity: 0.4; /* Aumentado a 0.4 para una visibilidad clara pero translúcida */
+    opacity: 0.4;
 }
 
 /* ## SECCIÓN DE CONTACTO ## */
 .contact-gradient {
     position: relative;
 }
+
 .contact-gradient::before {
     content: "";
     position: absolute;
@@ -78,6 +73,7 @@ body {
     background: linear-gradient(to right, black 50%, transparent 100%);
     z-index: 1;
 }
+
 .contact-content {
     position: relative;
     z-index: 2;
@@ -85,32 +81,6 @@ body {
 
 .wp-block-gallery {
     display: none !important;
-}
-
-/* ## HERO (VIDEO) ## */
-
-/* Contenedor principal del hero (video) */
-.hero-video-container {
-    position: relative;
-    width: 100%;
-    height: 70vh; /* Altura más moderada */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Capa oscura sobre el video */
-.hero-video-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 0;
-    pointer-events: none;
 }
 
 /* Ajustes para el navbar superpuesto */
@@ -130,52 +100,6 @@ body {
 .navbar-dark .nav-link {
     color: white;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-/* Estilos para el video */
-.hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Mantén esta propiedad solo para escritorio */
-    z-index: -1;
-}
-
-/* Contenedor de las imágenes PNG superpuestas */
-.award-images-overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-    display: flex;
-    gap: 15px;
-    align-items: flex-end;
-    z-index: 2;
-}
-
-.award-images-overlay .award-icon {
-    max-width: 150px;
-    height: auto;
-    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
-}
-
-/* Contenido del hero (imagen central) */
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: white;
-}
-
-.hero-logo {
-    max-width: 50%;
-    height: auto;
 }
 
 /* ## SECCIÓN DE CONTACTO ## */
@@ -212,51 +136,113 @@ body {
     margin-right: 0.5rem;
 }
 
-/* ## MEDIA QUERIES PARA ADAPTACIÓN A MÓVILES ## */
-@media (max-width: 640px) {
-    
-    /* Hero (Video) */
-    .hero-video-container {
-        /* Para un video 1:1, la altura debe ser igual al ancho para un contenedor cuadrado */
+/* ## MEDIA QUERIES PARA ADAPTACIÓN A DISPOSITIVOS ## */
 
-        width: 100vw;
-        max-height: 60vh;
+/* Estilos específicos para ESCRITORIO (a partir de 769px) */
+@media (min-width: 769px) {
+    .hero-video-container {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px; /* Espacio entre el logo y los premios */
     }
 
     .hero-video {
-        /* object-fit: contain ajusta el video para que se vea completo, sin recortarlo */
-        object-fit: contain;
-        /* Elimina la propiedad object-position en la media query para móviles */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: -1;
     }
 
-    /* ... otros estilos para móviles ... */
+    .hero-content {
+        z-index: 2;
+        text-align: center;
+        color: white;
+    }
+
+    .hero-logo {
+        max-width: 50%;
+    }
+
+    .award-images-overlay {
+        z-index: 5;
+        display: flex;
+        gap: 15px;
+        align-items: flex-end;
+    }
+
+    .award-images-overlay .award-icon {
+        max-width: 150px;
+        height: auto;
+        filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+    }
 }
 
-/* Logo principal */
-.hero-logo {
-    max-width: 80%; /* Logo más grande en móviles */
-}
+/* Estilos específicos para MÓVILES (hasta 768px) */
+@media (max-width: 768px) {
+    .hero-video-container {
+        position: relative;
+        width: 100%;
+        height: 100vw;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-/* Awards */
-.award-images-overlay {
-    bottom: 10px; /* Bajar los awards para que no se choquen con el logo */
-    gap: 10px; /* Menos espacio entre los iconos */
-    z-index: 2;
-}
+    .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+        z-index: -1;
+    }
 
-.award-images-overlay .award-icon {
-    max-width: 75px; /* Iconos más pequeños para que quepan bien */
-}
+    .hero-content {
+        z-index: 2;
+        text-align: center;
+    }
 
-/* Contacto */
-.contact-section {
-    height: 80vh; /* Aumenta la altura para que el contenido se vea mejor en vertical */
-}
+    .hero-logo {
+        max-width: 80%;
+    }
 
-.contact-section::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
-}
+    .award-images-overlay {
+        z-index: 5;
+        display: flex;
+        gap: 10px;
+        align-items: flex-end;
+    }
 
-.contact-content {
-    padding: 2rem 1rem; /* Añade espacio interior en móviles */
+    .award-images-overlay .award-icon {
+        max-width: 75px;
+    }
+
+    .contact-section {
+        height: 80vh;
+    }
+
+    .contact-section::before {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
+    }
+
+    .contact-content {
+        padding: 2rem 1rem;
+    }
 }
