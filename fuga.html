@@ -11,117 +11,150 @@
 
     <style>
         .related-projects-section {
-    text-align: center;
-    padding: 4rem 0;
-    background-color: #111;
+            text-align: center;
+            padding: 4rem 0;
+            background-color: #111;
+        }
+
+        .gallery-grid-4-images {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 0.75rem;
+            margin-top: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 60vh;
+        }
+
+        /* Estilos para los diferentes tamaños de la cuadrícula */
+        .gallery-grid-4-images .grid-item-1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+        .gallery-grid-4-images .grid-item-2 {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+        }
+        .gallery-grid-4-images .grid-item-3 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .gallery-grid-4-images .grid-item-4 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+
+        /* Para que las imágenes se vean bien dentro del grid como fondo */
+        .gallery-grid-4-images > div {
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Estilos para el acordeón en la sección de contenido */
+        .post-content-section .accordion {
+            margin-top: 2rem;
+        }
+
+        /* Estilos para el listado de créditos */
+        .credits-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Estilo para cada línea de crédito (fila) */
+        .credits-list .credit-item {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        /* Alineación y espaciado de los elementos del crédito */
+        .credits-list .credit-item > span:first-child {
+            text-align: right;
+            width: 50%;
+            padding-right: 1.5rem;
+        }
+        
+        .credits-list .credit-item .credit-name {
+            text-align: left;
+            width: 50%;
+            padding-left: 1.5rem;
+        }
+
+        /* Estilo del contenedor del acordeón para que se integre con el fondo */
+.accordion {
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-color: rgba(255, 255, 255, 0.1);
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-color: #fff;
+    --bs-accordion-btn-icon-color: #fff;
+    --bs-accordion-btn-icon-width: 1.5rem;
 }
 
-.gallery-grid-4-images {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0.75rem;
-    margin-top: 2rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 60vh; /* Altura fija para que la galería no colapse */
+/* Estilo del botón del acordeón (el encabezado) */
+.accordion-button {
+    background-color: transparent !important;
+    color: #fff !important; /* Nuevo estilo para mejorar la legibilidad */
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 1.5rem 1rem;
 }
 
-/* Estilos para los diferentes tamaños de la cuadrícula */
-.gallery-grid-4-images .grid-item-1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-}
-.gallery-grid-4-images .grid-item-2 {
-    grid-column: 2 / 4;
-    grid-row: 1 / 2;
-}
-.gallery-grid-4-images .grid-item-3 {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
-.gallery-grid-4-images .grid-item-4 {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
+/* Estilo del cuerpo del acordeón (el contenido que se muestra) */
+.accordion-body {
+    background-color: var(--background_dark);
+    color: var(--foreground_light);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Para que las imágenes se vean bien dentro del grid como fondo */
-.gallery-grid-4-images > div {
-    background-size: cover;
-    background-position: center;
+/* Cambia el color del icono de la flecha cuando el acordeón está abierto */
+.accordion-button:not(.collapsed) {
+    color: var(--syntax_cyan);
 }
 
-/* Estilos para el acordeón en la sección de contenido */
-.post-content-section .accordion {
-    margin-top: 2rem;
-}
-/* Estilos para el listado de créditos */
-.credits-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Alinea las filas verticalmente en el centro */
-    width: 100%;
+/* Color del icono del acordeón (la flecha) */
+.accordion-button::after {
+    filter: invert(1) grayscale(100%) brightness(200%); /* Hace la flecha blanca */
 }
 
-/* Estilo para cada línea de crédito (fila) */
-.credits-list .credit-item {
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    width: 100%;
-    max-width: 500px; /* Limita el ancho para que no se vea estirado */
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    color: #ccc;
-    position: relative;
-    white-space: nowrap; /* Evita que el texto se rompa */
+/* Color del icono del acordeón cuando está abierto */
+.accordion-button:not(.collapsed)::after {
+    filter: none;
+    color: var(--syntax_cyan);
 }
-
-/* Primera columna (nombre) - Alineada a la derecha */
-.credits-list .credit-item > span:first-child {
-    text-align: right;
-    width: 50%; /* Ocupa la mitad del ancho del contenedor */
-    padding-right: 1.5rem; /* Espacio entre el nombre y el guion */
-}
-
-/* Segunda columna (rol) - Alineada a la izquierda */
-.credits-list .credit-item .credit-name {
-    text-align: left;
-    width: 50%; /* Ocupa la otra mitad del ancho */
-    padding-left: 1.5rem; /* Espacio entre el guion y el rol */
-}
-
-/* Inserta el guion en el centro con un pseudo-elemento */
-.credits-list .credit-item::after {
-    content: '-';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ccc;
-}
-</style>
+    </style>
 </head>
 <body>
 
 <main>
-    <div class="single-post-container">
-        <header class="navbar-superpuesta">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="index.html">PORTADA</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#proyectos">NOSOTROS</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
-                        </ul>
-                    </div>
+    
+    <header class="navbar-superpuesta">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">PORTADA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#proyectos">NOSOTROS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
+
+    <div class="single-post-container">
+        
         <div class="related-projects-section">
             <div class="container-fluid">
                 <div class="gallery-grid-4-images">
@@ -133,64 +166,97 @@
             </div>
         </div>
 
-        <div class="post-content-section">
-            <p>Este es el contenido principal de tu artículo o proyecto. Aquí puedes escribir una introducción, la sinopsis, y cualquier otra información relevante. Recuerda que este es un archivo estático, así que tendrás que editar manualmente el texto para cada artículo.</p>
-            <p>En este párrafo puedes explicar los desafíos de la producción, el proceso creativo, o cualquier detalle técnico que quieras compartir con tu audiencia. La idea es reemplazar este texto con el contenido real de tu post.</p>
-            
-            <div class="accordion post-content-accordion" id="accordionCredits">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            Equipo Técnico
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
-                        <div class="accordion-body">
-                            <div class="credits-list">
-                                <div class="credit-item">
-                                    <span class="credit-label">Director</span>
-                                    <span class="credit-name">Ulises Romero</span>
-                                </div>
-                                <div class="credit-item">
-                                    <span class="credit-label">Guion</span>
-                                    <span class="credit-name">Nombre del Guionista</span>
-                                </div>
-                                <div class="credit-item">
-                                    <span class="credit-label">Fotografía</span>
-                                    <span class="credit-name">Nombre del Fotógrafo</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="post-content-section" style="background-color: #111; color:white;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h1>FUGA</h1>
+                        <h6>Drama-Comedia / 20' / 2025</h6>
+                        <p>Esto es una breve sinopsis</p>
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Reparto
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
-                        <div class="accordion-body">
-                            <div class="credits-list centered-credits">
-                                <div class="credit-item">
-                                    <span>Manuel Turín</span>
-                                    <span class="credit-name">Amigo</span>
-                                </div>
-                                <div class="credit-item">
-                                    <span>María Pérez</span>
-                                    <span class="credit-name">Hermana</span>
-                                </div>
-                                <div class="credit-item">
-                                    <span>Carlos López</span>
-                                    <span class="credit-name">Padre</span>
+                        <div class="link-line mt-4 mb-4">
+                            <a href="https://www.imdb.com/title/ttXXXXXXX/" target="_blank" class="text-white text-decoration-none me-3" style="color:white; text-decoration: none;"><i class="bi bi-film me-1"></i>imdb</a>
+                            <a href="https://www.imdb.com/title/ttXXXXXXX/" target="_blank" class="text-white text-decoration-none me-3" style="color:white; text-decoration: none;"><i class="bi bi-youtube me-1"></i>YouTube</a>
+                        </div>
+
+
+
+
+                        <div class="credits-section">
+    
+                            <div class="row justify-content-center mt-5 mb-4">
+                                <div class="col-lg-8">
+                                    <h4 class="text-center">Reparto</h4>
+                                    <div class="credits-list">
+                                        <div class="credit-item">
+                                            <span class="credit-label">Carlos Bernardino</span>
+                                            <span class="credit-name">Personaje principal masculino</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Marta Pardo Torres</span>
+                                            <span class="credit-name">Personaje principal femenino</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="row justify-content-center mb-5">
+                                <div class="col-lg-8">
+                                    <h4 class="text-center">Equipo técnico</h4>
+                                    <div class="credits-list">
+                                        <div class="credit-item">
+                                            <span class="credit-label">Directores</span>
+                                            <span class="credit-name">Christian Delarge,<br>Ulises Romero Santos</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Guionistas</span>
+                                            <span class="credit-name">Christian Delarge,<br>Ulises Romero Santos</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Productores</span>
+                                            <span class="credit-name">Rocío López</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Directores de fotografía</span>
+                                            <span class="credit-name">Luis Prieto-Carreño</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Montaje</span>
+                                            <span class="credit-name">Ulises Romero Santos</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Diseño de sonido</span>
+                                            <span class="credit-name">Ulises Romero Santos</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Compositores</span>
+                                            <span class="credit-name">Ulises Romero Santos</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Diseño de producción</span>
+                                            <span class="credit-name">Ulises Romero Santos</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Vestuario</span>
+                                            <span class="credit-name">Ulises Romero Santos</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Maquillaje</span>
+                                            <span class="credit-name">Ulises Romero Santos</span>
+                                        </div>
+                                        <div class="credit-item">
+                                            <span class="credit-label">Efectos visuales</span>
+                                            <span class="credit-name">Ulises Romero Santos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </main>
 
@@ -198,5 +264,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </footer>
+
 </body>
 </html>
