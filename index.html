@@ -1,132 +1,151 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>octopusav</title>
+    <title>OctopusAV</title>
 
+    <!-- ===========================
+         ESTILOS CSS
+         Se recomienda eliminar duplicados para evitar conflictos
+    ============================ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-
 </head>
 <body>
 
 
-
 <main>
-    <section id="portada" class="hero-video-container">
-    <video class="hero-video" autoplay muted loop playsinline poster="ruta/a/imagen_de_respaldo.jpg">
-        <source src="img/Minivideo2.mp4" type="video/mp4">
-        <source src="ruta/a/tu-video.webm" type="video/webm">
-    </video>
-      <header class="navbar-superpuesta">
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#portada">PORTADA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#proyectos">NOSOTROS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
-                </ul>
-            </div>
-        </div>
-          </nav>
-      </header>
 
-<div class="award-images-overlay">
+    <!-- ## HERO ## -->
+    <section id="portada" class="hero-video-container">
+        <!-- Video de fondo -->
+        <video class="hero-video" autoplay muted loop playsinline poster="ruta/a/imagen_de_respaldo.jpg">
+            <source src="img/Minivideo2.mp4" type="video/mp4">
+            <source src="ruta/a/tu-video.webm" type="video/webm">
+        </video>
+
+        <!-- $ NAVBAR SUPERPUESTA -->
+        <header class="navbar-superpuesta">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="#portada">PORTADA</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#proyectos">NOSOTROS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- $ ICONOS EN EL HERO-->
+        <div class="award-images-overlay">
             <img src="img/logomesa1.png" alt="Award 1" class="img-fluid award-icon">
             <img src="img/logomesa2.png" alt="Award 2" class="img-fluid award-icon">
             <img src="img/logomesa3.png" alt="Award 3" class="img-fluid award-icon">
             <img src="img/logomesa4.png" alt="Award 4" class="img-fluid award-icon">
         </div>
 
+        <!-- ===========================
+             LOGO HERO
+        ============================ -->
+        <div class="hero-content">
+            <img src="img/Logo + tipo tinta blanca.png" alt="Logo de OctopusAV" class="img-fluid hero-logo">
+        </div>
+    </section>
 
-    <div class="hero-content">
-        <img src="img/Logo + tipo tinta blanca.png" alt="Logo de OctopusAV" class="img-fluid hero-logo">     
-    </div>
-
-</section>
-
-    <section id="proyectos" class="">
+    <!-- ## PROYECTOS ## -->
+    <section id="proyectos">
         <div class="container-fluid g-0">
             <div class="row g-0">
+
+                <!-- $ PROYECTO 1 -->
                 <div class="col-md-3 p-0">
                     <a href="fuga.html" class="d-block thumbnail-hover">
-                        <img width="300" height="169" src="img/portada/FUGA-Cartel_Horizontal-(compress).jpg" class="img-fluid d-block w-100 h-100" alt="Fuga" style="object-fit: cover;">
+                        <img width="300" height="169" src="img/portada/FUGA-Cartel_Horizontal-(compress).jpg" 
+                             class="img-fluid d-block w-100 h-100" alt="Fuga" style="object-fit: cover;">
                     </a>
                 </div>
 
+                <!-- $ PROYECTO 2 -->
                 <div class="col-md-3 p-0">
                     <a href="expiacion.html" class="d-block thumbnail-hover">
-                        <img width="300" height="169" src="img/portada/EXPIACI+ôN-Cartel_Horizontal-(compress).jpg" class="img-fluid d-block w-100 h-100" alt="Expiación" style="object-fit: cover;">
+                        <img width="300" height="169" src="img/portada/EXPIACI+ôN-Cartel_Horizontal-(compress).jpg" 
+                             class="img-fluid d-block w-100 h-100" alt="Expiación" style="object-fit: cover;">
                     </a>
                 </div>
 
+                <!-- $ PROYECTO 3 -->
                 <div class="col-md-3 p-0">
                     <a href="ketchumina.html" class="d-block thumbnail-hover">
-                        <img width="300" height="169" src="img/portada/KETCHUMIN+ü-Cartel_Horizontal-(compress).jpeg" class="img-fluid d-block w-100 h-100" alt="Ketchuminú" style="object-fit: cover;">
+                        <img width="300" height="169" src="img/portada/KETCHUMIN+ü-Cartel_Horizontal-(compress).jpeg" 
+                             class="img-fluid d-block w-100 h-100" alt="Ketchuminú" style="object-fit: cover;">
                     </a>
                 </div>
 
+                <!-- $ PROYECTO 4 -->
                 <div class="col-md-3 p-0">
                     <a href="vayanotas.html" class="d-block thumbnail-hover">
-                        <img width="300" height="169" src="img/portada/VAYA_NOTA(S)-Cartel_Horizontal-(compress).jpg" class="img-fluid d-block w-100 h-100" alt="Vaya Nota(s)" style="object-fit: cover;">
+                        <img width="300" height="169" src="img/portada/VAYA_NOTA(S)-Cartel_Horizontal-(compress).jpg" 
+                             class="img-fluid d-block w-100 h-100" alt="Vaya Nota(s)" style="object-fit: cover;">
                     </a>
                 </div>
+
             </div>
         </div>
     </section>
 
-<section id="contacto" class="contact-section d-flex align-items-center">
-    <div class="container contact-content">
-        <h2>CONTACTO</h2>
-        <p class="lead">Si tienes alguna pregunta o proyecto en mente, no dudes en contactarnos.</p>
+    <!-- ## CONTACTO ## -->
+    <section id="contacto" class="contact-section d-flex align-items-center">
+        <div class="container contact-content">
+            <h2>CONTACTO</h2>
+            <p class="lead">Si tienes alguna pregunta o proyecto en mente, no dudes en contactarnos.</p>
 
-        <div class="contact-info my-4">
-            <p>
-                <a href="mailto:octopusprod@gmail.com" class="contact-link text-white text-decoration-none">
-                    <i class="bi bi-envelope-fill"></i>
-                    octopusprod@gmail.com
-                </a>
-            </p>
-        </div>
-
-        <div class="social-icons mb-4">
-            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube" class="text-white text-decoration-none me-3">
-                <i class="bi bi-youtube"></i>
-            </a>
-            <a href="https://www.imdb.com/" target="_blank" aria-label="IMDb" class="text-white text-decoration-none me-3">
-                <i class="bi bi-film"></i>
-            </a>
-            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn" class="text-white text-decoration-none me-3">
-                <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="text-white text-decoration-none">
-                <i class="bi bi-instagram"></i>
-            </a>
-        </div>
-        
-        <div class="award-strip">
+            <!-- $ CORREO ELECTRÓNICO -->
+            <div class="contact-info my-4">
+                <p>
+                    <a href="mailto:octopusprod@gmail.com" class="contact-link text-white text-decoration-none">
+                        <i class="bi bi-envelope-fill"></i>
+                        octopusprod@gmail.com
+                    </a>
+                </p>
             </div>
-    </div>
-</section>
+
+            <!-- $ RRSS -->
+            <div class="social-icons mb-4">
+                <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube" class="text-white text-decoration-none me-3">
+                    <i class="bi bi-youtube"></i>
+                </a>
+                <a href="https://www.imdb.com/" target="_blank" aria-label="IMDb" class="text-white text-decoration-none me-3">
+                    <i class="bi bi-film"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn" class="text-white text-decoration-none me-3">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="text-white text-decoration-none">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Strip de premios (vacío, revisar si se usa) -->
+            <div class="award-strip"></div>
+        </div>
+    </section>
+
 </main>
 
-<!-- modify this form HTML and place wherever you want your form -->
-<form action="https://formsubmit.co/injsvq9b0w@bwmyga.com" method="POST">
-    <button type="submit">Enviar</button>
-</form>
-
+<!-- ## FOOTER ## -->
 <footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </footer>
+
 </body>
 </html>
