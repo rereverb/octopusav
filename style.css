@@ -1,0 +1,242 @@
+/*
+Theme Name: OctopusAV de Lara
+Theme URI: https://botega.co.uk
+Author: Álvaro Lara
+Author URI: https://botega.co.uk
+Description: Basic WordPress theme for Sitepoint theme building tutorial
+Text Domain: bsimple
+Version: 1.0.0
+License: GNU General Public License v2 or later
+*/
+
+/*!
+* Start Bootstrap - Grayscale v7.0.6 (https://startbootstrap.com/theme/grayscale)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
+*/
+/*!
+* Bootstrap  v5.2.3 (https://getbootstrap.com/)
+* Copyright 2011-2022 The Bootstrap Authors
+* Copyright 2011-2022 Twitter, Inc.
+* Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+*/
+
+@charset "UTF-8";
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Coolvetica', sans-serif;
+}
+
+/* Modificación del efecto hover */
+/* APLICA ESTAS REGLAS AL CONTENEDOR 'A' */
+.thumbnail-hover {
+    position: relative; /* Es necesario para posicionar el pseudo-elemento */
+    overflow: hidden; /* Para que el granulado no se salga de los bordes */
+    display: block; /* Asegura que el enlace se comporte como un bloque */
+}
+
+/* Elimina el efecto de zoom del A:hover */
+.thumbnail-hover:hover {
+    cursor: pointer;
+}
+
+/* Pseudo-elemento para el granulado */
+/* ... (el resto de tu CSS anterior sin cambios) ... */
+
+/* Modificación del efecto hover */
+/* APLICA ESTAS REGLAS AL CONTENEDOR 'A' */
+.thumbnail-hover {
+    position: relative; /* Es necesario para posicionar el pseudo-elemento */
+    overflow: hidden; /* Para que el granulado no se salga de los bordes */
+    display: block; /* Asegura que el enlace se comporte como un bloque */
+}
+
+/* Elimina el efecto de zoom del A:hover */
+.thumbnail-hover:hover {
+    cursor: pointer;
+}
+
+/* Pseudo-elemento para el granulado más visible (CINEMATOGRÁFICO / ARTE POP) */
+.thumbnail-hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Nuevo patrón de puntos finos para el granulado */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="2" height="2" fill="rgba(255,255,255,0.4)"/><rect x="2" y="2" width="2" height="2" fill="rgba(0,0,0,0.6)"/></svg>');
+    background-size: 4px 4px; /* Tamaño del patrón */
+    opacity: 0; /* Por defecto, el granulado es invisible */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+    pointer-events: none; /* No bloquea los clics en la imagen */
+}
+
+/* Muestra el granulado al pasar el ratón por encima */
+.thumbnail-hover:hover::after {
+    opacity: 0.4; /* Aumentado a 0.4 para una visibilidad clara pero translúcida */
+}
+
+/* ... (el resto de tu CSS anterior sin cambios) ... */
+
+.contact-gradient {
+    position: relative;
+}
+.contact-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, black 50%, transparent 100%);
+    z-index: 1;
+}
+.contact-content {
+    position: relative;
+    z-index: 2;
+}
+
+.wp-block-gallery {
+    display: none !important;
+}
+
+/*
+ * Contenedor principal del hero (video)
+ */
+.hero-video-container {
+    position: relative; /* Muy importante para posicionar el pseudo-elemento */
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Añade el pseudo-elemento para la capa oscura */
+}
+
+.hero-video-container::before {
+    content: ''; /* Obligatorio para los pseudo-elementos */
+    position: absolute; /* Para que se posicione sobre el video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Color negro con 50% de opacidad */
+    z-index: 0; /* Asegúrate de que esté entre el video (-1) y el contenido (1, 2, 5, 10) */
+    pointer-events: none; /* Permite interactuar con los elementos que estén debajo */
+}
+
+/*
+ * Ajustes para el navbar (mantén lo que ya tenías)
+ */
+.navbar-superpuesta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+}
+
+.navbar.bg-dark {
+    background-color: transparent !important;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/*
+ * Estilos para el video (mantén lo que ya tenías)
+ */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1; /* El video estará debajo de todo */
+}
+
+/*
+ * Contenedor de las imágenes PNG superpuestas (mantén lo que ya tenías)
+ */
+.award-images-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; /* Por encima de la capa oscura y el video */
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.award-images-overlay .award-icon {
+    max-width: 150px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+/*
+ * Contenido del hero (imagen central) (mantén lo que ya tenías)
+ */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Por encima de la capa oscura y el video */
+    text-align: center;
+    color: white;
+}
+
+.hero-logo {
+    max-width: 50%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .hero-logo {
+        max-width: 80%;
+    }
+}
+
+.contact-section {
+    position: relative;
+    background-image: url('img/portada/CONTACTO-compress2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    color: #fff;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Estilo para los iconos de contacto y redes sociales */
+.contact-link,
+.social-icons a {
+    font-size: 1.5rem; /* Tamaño de fuente para los iconos */
+
+}
+
+/* Espacio entre el ícono de correo y el texto */
+.contact-link i {
+    margin-right: 0.5rem;
+}
