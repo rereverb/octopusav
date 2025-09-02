@@ -198,6 +198,7 @@ body {
         overflow: hidden;
         display: flex;
         justify-content: center;
+
         align-items: center;
         flex-direction: column;
         gap: 10px;
@@ -220,14 +221,15 @@ body {
     }
 
     .hero-logo {
-        max-width: 80%;
+        max-width: 60%;
     }
 
     .award-images-overlay {
-        z-index: 5;
+        /* z-index: 5;
         display: flex;
         gap: 10px;
-        align-items: flex-end;
+        align-items: flex-end; */
+        display: none;
     }
 
     .award-images-overlay .award-icon {
