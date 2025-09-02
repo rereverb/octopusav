@@ -28,11 +28,25 @@ License: GNU General Public License v2 or later
 # BASE Y TIPOGRAFÍA */
 /*
 $ BASE */
-body {
+/*body {
     color: white;
     font-family: 'Coolvetica', sans-serif;
     background-color: #121212;
-    /*background-color: #070014;*/
+    /*background-color: #070014;*//*
+}*/
+
+body {
+    /* Mantén tus estilos base */
+    color: white;
+    font-family: 'Coolvetica', sans-serif;
+    
+    /* Textura de ruido sutil */
+    background-color: #121212;
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 4px 4px;
+    background-position: 0 0, 2px 2px;
 }
 
 /*
