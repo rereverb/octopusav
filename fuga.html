@@ -6,51 +6,97 @@
     <title>Título del Artículo - OctopusAV</title>
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
         .related-projects-section {
             text-align: center;
             padding: 4rem 0;
-            background-color: #111;
         }
 
-        .gallery-grid-4-images {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-gap: 0.75rem;
-            margin-top: 2rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 60vh;
-        }
 
-        /* Estilos para los diferentes tamaños de la cuadrícula */
-        .gallery-grid-4-images .grid-item-1 {
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
-        }
-        .gallery-grid-4-images .grid-item-2 {
-            grid-column: 2 / 4;
-            grid-row: 1 / 2;
-        }
-        .gallery-grid-4-images .grid-item-3 {
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-        }
-        .gallery-grid-4-images .grid-item-4 {
-            grid-column: 3 / 4;
-            grid-row: 2 / 3;
-        }
 
-        /* Para que las imágenes se vean bien dentro del grid como fondo */
-        .gallery-grid-4-images > div {
-            background-size: cover;
-            background-position: center;
-        }
+/* =====================================================
+/* # GALLERY-GRID */
+
+/* Disposición 1: Grande vertical a la izquierda (tu diseño original) */
+.gallery-grid-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0.75rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+}
+.gallery-grid-1 .grid-item-1 { grid-column: 1 / 2; grid-row: 1 / 3; }
+.gallery-grid-1 .grid-item-2 { grid-column: 2 / 4; grid-row: 1 / 2; }
+.gallery-grid-1 .grid-item-3 { grid-column: 2 / 3; grid-row: 2 / 3; }
+.gallery-grid-1 .grid-item-4 { grid-column: 3 / 4; grid-row: 2 / 3; }
+
+/* Disposición 2: Grande horizontal arriba */
+.gallery-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 0.75rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+}
+.gallery-grid-2 .grid-item-1 { grid-column: 1 / 4; grid-row: 1 / 2; }
+.gallery-grid-2 .grid-item-2 { grid-column: 1 / 2; grid-row: 2 / 3; }
+.gallery-grid-2 .grid-item-3 { grid-column: 2 / 3; grid-row: 2 / 3; }
+.gallery-grid-2 .grid-item-4 { grid-column: 3 / 4; grid-row: 2 / 3; }
+
+/* Disposición 3: Cuatro imágenes iguales (2x2) */
+.gallery-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0.75rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+}
+.gallery-grid-3 .grid-item-1 { grid-column: 1 / 2; grid-row: 1 / 2; }
+.gallery-grid-3 .grid-item-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
+.gallery-grid-3 .grid-item-3 { grid-column: 1 / 2; grid-row: 2 / 3; }
+.gallery-grid-3 .grid-item-4 { grid-column: 2 / 3; grid-row: 2 / 3; }
+
+/* Disposición 4: Grande abajo y tres arriba */
+.gallery-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-gap: 0.75rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+}
+.gallery-grid-4 .grid-item-1 { grid-column: 1 / 2; grid-row: 1 / 2; }
+.gallery-grid-4 .grid-item-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
+.gallery-grid-4 .grid-item-3 { grid-column: 3 / 4; grid-row: 1 / 2; }
+.gallery-grid-4 .grid-item-4 { grid-column: 1 / 4; grid-row: 2 / 3; }
+
+/* Para que las imágenes se vean bien dentro del grid como fondo (regla general) */
+.gallery-grid-1 > div, .gallery-grid-2 > div, .gallery-grid-3 > div, .gallery-grid-4 > div {
+    background-size: cover;
+    background-position: center;
+}
+
+/* =====================================================
+
+
 
         /* Estilos para el acordeón en la sección de contenido */
         .post-content-section .accordion {
@@ -136,40 +182,53 @@
 
 <main>
     
-    <header class="navbar-superpuesta">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">PORTADA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#proyectos">NOSOTROS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+
 
     <div class="single-post-container">
         
-        <div class="related-projects-section">
-            <div class="container-fluid">
-                <div class="gallery-grid-4-images">
-                    <div class="grid-item-1" style="background-image: url('img/fotogramas_fuga/FUGA-Cartel_Vertical-(compress).jpg');" aria-label="Descripción de la imagen 1"></div>
-                    <div class="grid-item-2" style="background-image: url('img/fotogramas_fuga/FUGA FOTOGRAMAS (3).png');" aria-label="Descripción de la imagen 2"></div>
-                    <div class="grid-item-3" style="background-image: url('img/fotogramas_fuga/FUGA FOTOGRAMAS (1).png');" aria-label="Descripción de la imagen 3"></div>
-                    <div class="grid-item-4" style="background-image: url('img/fotogramas_fuga/FUGA FOTOGRAMAS (2).png');" aria-label="Descripción de la imagen 4"></div>
+
+
+
+
+        <div class="related-projects-section p-0">
+
+            <!-- $ NAVBAR SUPERPUESTA -->
+            <header class="navbar-superpuesta">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/portada/Hero_Logo.png" alt="Logo de OctopusAV" class="logo-navbar" style="max-height: 30px; width: auto;">
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="index.html">PORTADA</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#proyectos">NOSOTROS</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container-fluid pt-3">
+                <div class="gallery-grid-1">
+                    <div class="grid-item-1" style="background-image: url('assets/fuga/Cartel_Fuga.jpg');" aria-label="Descripción de la imagen 1"></div>
+                    <div class="grid-item-2" style="background-image: url('assets/fuga/Fotograma_Fuga_1.png');" aria-label="Descripción de la imagen 2"></div>
+                    <div class="grid-item-3" style="background-image: url('assets/fuga/Fotograma_Fuga_2.png');" aria-label="Descripción de la imagen 3"></div>
+                    <div class="grid-item-4" style="background-image: url('assets/fuga/Fotograma_Fuga_3.png');" aria-label="Descripción de la imagen 4"></div>
                 </div>
             </div>
         </div>
 
-        <div class="post-content-section" style="background-color: #111; color:white;">
+        <div class="post-content-section pt-4" style="color:white;">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 text-center">
                         <h1>FUGA</h1>
                         <h6>Drama-Comedia / 20' / 2025</h6>
                         <p>Esto es una breve sinopsis</p>
@@ -254,10 +313,60 @@
 
                         </div>
                 </div>
+
+
+            <div class="container-fluid pb-4">
+                <div class="gallery-grid-2">
+                    <div class="grid-item-1" style="background-image: url('assets/fuga/Making_Fuga_1.jpg');" aria-label="Descripción de la imagen 1"></div>
+                    <div class="grid-item-2" style="background-image: url('assets/fuga/Making_Fuga_2.jpg');" aria-label="Descripción de la imagen 2"></div>
+                    <div class="grid-item-3" style="background-image: url('assets/fuga/Making_Fuga_3.jpg');" aria-label="Descripción de la imagen 3"></div>
+                    <div class="grid-item-4" style="background-image: url('assets/fuga/Making_Fuga_4.jpg');" aria-label="Descripción de la imagen 4"></div>
+                </div>
             </div>
+
+
+
+            </div>
+        </div>
         </div>
         
     </div>
+
+    <!-- ## CONTACTO ## -->
+    <section id="contacto" class="contact-section d-flex align-items-center">
+        <div class="container contact-content">
+            <h2>CONTACTO</h2>
+            <p class="lead">Si tienes alguna pregunta o proyecto en mente, no dudes en contactarnos.</p>
+
+            <!-- $ CORREO ELECTRÓNICO -->
+            <div class="contact-info my-4">
+                <p>
+                    <a href="mailto:octopusprod@gmail.com" class="contact-link text-white text-decoration-none">
+                        <i class="bi bi-envelope-fill"></i>
+                        octopusprod@gmail.com
+                    </a>
+                </p>
+            </div>
+
+            <!-- $ RRSS -->
+            <div class="social-icons mb-4">
+                <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube" class="text-white text-decoration-none me-3">
+                    <i class="bi bi-youtube"></i>
+                </a>
+                <a href="https://www.imdb.com/" target="_blank" aria-label="IMDb" class="text-white text-decoration-none me-3">
+                    <i class="bi bi-film"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn" class="text-white text-decoration-none me-3">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="text-white text-decoration-none">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
 </main>
 
 <footer>

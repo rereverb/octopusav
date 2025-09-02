@@ -1,0 +1,553 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 8054,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"insert",
+					{
+						"characters": "css"
+					},
+					"AwAAACwDAAAAAAAALQMAAAAAAAAAAAAALQMAAAAAAAAuAwAAAAAAAAAAAAAuAwAAAAAAAC8DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALAMAAAAAAAAsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					3,
+					"left_delete",
+					null,
+					"AwAAAC4DAAAAAAAALgMAAAAAAAABAAAAcy0DAAAAAAAALQMAAAAAAAABAAAAcywDAAAAAAAALAMAAAAAAAABAAAAYw",
+					"AQAAAAAAAAABAAAALwMAAAAAAAAvAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"insert",
+					{
+						"characters": "minivideo"
+					},
+					"CQAAACwDAAAAAAAALQMAAAAAAAAAAAAALQMAAAAAAAAuAwAAAAAAAAAAAAAuAwAAAAAAAC8DAAAAAAAAAAAAAC8DAAAAAAAAMAMAAAAAAAAAAAAAMAMAAAAAAAAxAwAAAAAAAAAAAAAxAwAAAAAAADIDAAAAAAAAAAAAADIDAAAAAAAAMwMAAAAAAAAAAAAAMwMAAAAAAAA0AwAAAAAAAAAAAAA0AwAAAAAAADUDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALAMAAAAAAAAsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert_completion",
+					{
+						"completion": "MinivideoBox",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "MinivideoBox"
+					},
+					"AgAAACwDAAAAAAAALAMAAAAAAAAJAAAAbWluaXZpZGVvLAMAAAAAAAA4AwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANQMAAAAAAAA1AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					12,
+					"left_delete",
+					null,
+					"DAAAADcDAAAAAAAANwMAAAAAAAABAAAAeDYDAAAAAAAANgMAAAAAAAABAAAAbzUDAAAAAAAANQMAAAAAAAABAAAAQjQDAAAAAAAANAMAAAAAAAABAAAAbzMDAAAAAAAAMwMAAAAAAAABAAAAZTIDAAAAAAAAMgMAAAAAAAABAAAAZDEDAAAAAAAAMQMAAAAAAAABAAAAaTADAAAAAAAAMAMAAAAAAAABAAAAdi8DAAAAAAAALwMAAAAAAAABAAAAaS4DAAAAAAAALgMAAAAAAAABAAAAbi0DAAAAAAAALQMAAAAAAAABAAAAaSwDAAAAAAAALAMAAAAAAAABAAAATQ",
+					"AQAAAAAAAAABAAAAOAMAAAAAAAA4AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": "css"
+					},
+					"AwAAACwDAAAAAAAALQMAAAAAAAAAAAAALQMAAAAAAAAuAwAAAAAAAAAAAAAuAwAAAAAAAC8DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALAMAAAAAAAAsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					3,
+					"left_delete",
+					null,
+					"AwAAAC4DAAAAAAAALgMAAAAAAAABAAAAcy0DAAAAAAAALQMAAAAAAAABAAAAcywDAAAAAAAALAMAAAAAAAABAAAAYw",
+					"AQAAAAAAAAABAAAALwMAAAAAAAAvAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"insert",
+					{
+						"characters": "assets/css"
+					},
+					"CgAAACwDAAAAAAAALQMAAAAAAAAAAAAALQMAAAAAAAAuAwAAAAAAAAAAAAAuAwAAAAAAAC8DAAAAAAAAAAAAAC8DAAAAAAAAMAMAAAAAAAAAAAAAMAMAAAAAAAAxAwAAAAAAAAAAAAAxAwAAAAAAADIDAAAAAAAAAAAAADIDAAAAAAAAMwMAAAAAAAAAAAAAMwMAAAAAAAA0AwAAAAAAAAAAAAA0AwAAAAAAADUDAAAAAAAAAAAAADUDAAAAAAAANgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALAMAAAAAAAAsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"insert",
+					{
+						"characters": "/"
+					},
+					"AQAAADYDAAAAAAAANwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANgMAAAAAAAA2AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					20,
+					1,
+					"insert",
+					{
+						"characters": "square"
+					},
+					"BgAAACwDAAAAAAAALQMAAAAAAAALAAAAYXNzZXRzL2Nzcy8tAwAAAAAAAC4DAAAAAAAAAAAAAC4DAAAAAAAALwMAAAAAAAAAAAAALwMAAAAAAAAwAwAAAAAAAAAAAAAwAwAAAAAAADEDAAAAAAAAAAAAADEDAAAAAAAAMgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANwMAAAAAAAAsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					6,
+					"left_delete",
+					null,
+					"BgAAADEDAAAAAAAAMQMAAAAAAAABAAAAZTADAAAAAAAAMAMAAAAAAAABAAAAci8DAAAAAAAALwMAAAAAAAABAAAAYS4DAAAAAAAALgMAAAAAAAABAAAAdS0DAAAAAAAALQMAAAAAAAABAAAAcSwDAAAAAAAALAMAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAMgMAAAAAAAAyAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					22,
+					1,
+					"insert",
+					{
+						"characters": "css"
+					},
+					"AwAAACwDAAAAAAAALQMAAAAAAAAAAAAALQMAAAAAAAAuAwAAAAAAAAAAAAAuAwAAAAAAAC8DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALAMAAAAAAAAsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					23,
+					3,
+					"left_delete",
+					null,
+					"AwAAAC4DAAAAAAAALgMAAAAAAAABAAAAcy0DAAAAAAAALQMAAAAAAAABAAAAcywDAAAAAAAALAMAAAAAAAABAAAAYw",
+					"AQAAAAAAAAABAAAALwMAAAAAAAAvAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					24,
+					1,
+					"insert",
+					{
+						"characters": "assets/porta"
+					},
+					"DAAAACwDAAAAAAAALQMAAAAAAAAAAAAALQMAAAAAAAAuAwAAAAAAAAAAAAAuAwAAAAAAAC8DAAAAAAAAAAAAAC8DAAAAAAAAMAMAAAAAAAAAAAAAMAMAAAAAAAAxAwAAAAAAAAAAAAAxAwAAAAAAADIDAAAAAAAAAAAAADIDAAAAAAAAMwMAAAAAAAAAAAAAMwMAAAAAAAA0AwAAAAAAAAAAAAA0AwAAAAAAADUDAAAAAAAAAAAAADUDAAAAAAAANgMAAAAAAAAAAAAANgMAAAAAAAA3AwAAAAAAAAAAAAA3AwAAAAAAADgDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALAMAAAAAAAAsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					1,
+					"insert",
+					{
+						"characters": "da/"
+					},
+					"AwAAADgDAAAAAAAAOQMAAAAAAAAAAAAAOQMAAAAAAAA6AwAAAAAAAAAAAAA6AwAAAAAAADsDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOAMAAAAAAAA4AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": "Video"
+					},
+					"BQAAADsDAAAAAAAAPAMAAAAAAAAAAAAAPAMAAAAAAAA9AwAAAAAAAAAAAAA9AwAAAAAAAD4DAAAAAAAAAAAAAD4DAAAAAAAAPwMAAAAAAAAAAAAAPwMAAAAAAABAAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOwMAAAAAAAA7AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					27,
+					1,
+					"insert_completion",
+					{
+						"completion": "MinivideoBox",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "MinivideoBox"
+					},
+					"AgAAADsDAAAAAAAAOwMAAAAAAAAFAAAAVmlkZW87AwAAAAAAAEcDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQAMAAAAAAABAAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"paste",
+					null,
+					"AQAAADsDAAAAAAAASgMAAAAAAAAMAAAATWluaXZpZGVvQm94",
+					"AQAAAAAAAAABAAAARwMAAAAAAAA7AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					31,
+					1,
+					"insert",
+					{
+						"characters": ".mp4"
+					},
+					"BAAAAEoDAAAAAAAASwMAAAAAAAAAAAAASwMAAAAAAABMAwAAAAAAAAAAAABMAwAAAAAAAE0DAAAAAAAAAAAAAE0DAAAAAAAATgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASgMAAAAAAABKAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					34,
+					1,
+					"insert",
+					{
+						"characters": "Horizontal"
+					},
+					"CgAAAEQDAAAAAAAARQMAAAAAAAAGAAAAU3F1YXJlRQMAAAAAAABGAwAAAAAAAAAAAABGAwAAAAAAAEcDAAAAAAAAAAAAAEcDAAAAAAAASAMAAAAAAAAAAAAASAMAAAAAAABJAwAAAAAAAAAAAABJAwAAAAAAAEoDAAAAAAAAAAAAAEoDAAAAAAAASwMAAAAAAAAAAAAASwMAAAAAAABMAwAAAAAAAAAAAABMAwAAAAAAAE0DAAAAAAAAAAAAAE0DAAAAAAAATgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARAMAAAAAAABKAwAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"custoi",
+				"UI: Customize Color Scheme"
+			],
+			[
+				"Colored Comments: ",
+				"Colored Comments: Edit Color Scheme"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"colored",
+				"Colored Comments: Settings"
+			],
+			[
+				"Package Control: list ",
+				"Package Control: List Packages"
+			],
+			[
+				"package control in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/rerev/octopusav"
+	],
+	"file_history":
+	[
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/User/FilesystemAutocompletion.sublime-settings",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/FileSystem Autocompletion/Default (Windows).sublime-keymap",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/rerev/octopusav/index.html",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/FileSystem Autocompletion/FilesystemAutocompletion.sublime-settings",
+		"/C/Users/rerev/octopusav/octopusav.sublime-project",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/User/Preferences.sublime-settings",
+		"/C/Users/rerev/octopusav/fuga.html",
+		"/C/Users/rerev/octopusav/style.css",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/AutoFileName/autofilename.sublime-settings",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/User/colored_comments.sublime-settings",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/Colored Comments/colored_comments.sublime-settings",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/User/Mariana.sublime-color-scheme",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/Color Scheme - Default/Mariana.sublime-color-scheme",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/User/destacar.sublime-snippet",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/User/highlighter.sublime-settings",
+		"/C/Users/rerev/AppData/Roaming/Sublime Text/Packages/Highlighter/highlighter.sublime-settings",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-config.php",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/prueba/functions.php",
+		"/K/01-ÁLVARO_LARA/OCTOPUS AV/simply-static-1-1756759674/style.css",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/prueba/header.php",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/prueba/index.php",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/prueba/single.php",
+		"/K/01-ÁLVARO_LARA/OCTOPUS AV/simply-static-1-1756759674/index.html",
+		"/K/01-ÁLVARO_LARA/OCTOPUS AV/simply-static-1-1756759674/fuga.html",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/prueba/style.css",
+		"/K/01-ÁLVARO_LARA/OCTOPUS AV/simply-static-1-1756759674/header.html",
+		"/K/01-ÁLVARO_LARA/OCTOPUS AV/simply-static-1-1756759674/js/modal_proyectos.js",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/prueba/index - Copy.php",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/octopusav/index.html",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/octopusav/index - copia.html",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/octopusav/styles.css",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/prueba/js/secondary-thumbnail.js",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/prueba/jss/Nuevo documento de texto.txt",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/twentytwentyfive/templates/single.html",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/twentytwentyfive/templates/home.html",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/twentytwentyfive/templates/index.html",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/prueba/index.html",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/alvarolara/front-page.php",
+		"/J/AA. Lara.Audio/Pagina web/XAMPP/htdocs/wp-content/themes/index.php",
+		"/J/AA. Lara.Audio/Pagina web/XAMPP/htdocs/wp-content/index.php",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/index.php",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/twentytwentyfive/functions.php",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/index.php",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/twentytwentyfive/mypaja.php",
+		"/C/Users/rerev/Local Sites/octopusav/app/public/wp-content/themes/index.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/videomaker/style.css",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/videomaker/block-templates/index.html",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/videomaker/inc/patterns/footer.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/blockbase/index.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/index.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/index.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/plugins/index.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/index.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-admin/user/index.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-admin/network/index.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-admin/index.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-includes/blocks/index.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/blockbase/inc/patterns/footer-columns.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/blockbase/inc/patterns/404.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/blockbase/inc/patterns/footer-with-site-title.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/blockbase/inc/patterns/footer-small.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/blockbase/inc/patterns/footer-simple.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/blockbase/inc/patterns/footer-separator.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/blockbase/inc/patterns/footer-search.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/blockbase/inc/patterns/footer-primary.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/blockbase/inc/patterns/footer-left.php",
+		"/C/Users/rerev/Local Sites/octopusaudiovisuales/app/public/wp-content/themes/videomaker/functions.php"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"hero-log",
+			"hero-conte",
+			"hero-contet",
+			"hero-vide",
+			"award",
+			"object-posi",
+			"hero",
+			"related-projects-section"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8054,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								587,
+								587
+							]
+						],
+						"settings":
+						{
+							"color_helper.box_height": 18,
+							"color_helper.color_scheme": "Mariana.sublime-color-scheme",
+							"color_helper.refresh": false,
+							"color_helper.scan":
+							{
+								"allow_scanning": true,
+								"color_class":
+								[
+									{
+										"class": "css-level-4",
+										"scopes": ""
+									}
+								],
+								"color_trigger": "(?xi)\n(?:\n    \\b(?<![-#&$])(?:\n        color\\((?!\\s*-)|(?:hsla?|(?:ok)?(?:lch|lab)|hwb|rgba?)\\(\n) |\n\\b(?<![-#&$])[\\w]{3,}(?![(-])\\b|(?<![&])\\#)\n",
+								"current_ext": ".html",
+								"current_syntax": "HTML/HTML",
+								"enabled": true,
+								"last_updated": 1756831418.17,
+								"scanning": "meta.declaration-list.css -support.type.property-name.css -comment -string,meta.property-value.css -comment -string,meta.value.css -comment -string,meta.tag.inline.any.html string.quoted -constant.character.entity.html,meta.tag.any.html meta.attribute-with-value.style.html"
+							},
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "",
+	"project": "octopusav.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 315.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
