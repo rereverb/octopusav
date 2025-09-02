@@ -228,10 +228,10 @@
 
             <div class="container-fluid pt-3">
                 <div class="gallery-grid-1">
-                    <div class="grid-item-1" style="background-image: url('assets/fuga/Cartel_Fuga.jpg');" aria-label="Descripción de la imagen 1"></div>
-                    <div class="grid-item-2" style="background-image: url('assets/fuga/Fotograma_Fuga_1.png');" aria-label="Descripción de la imagen 2"></div>
-                    <div class="grid-item-3" style="background-image: url('assets/fuga/Fotograma_Fuga_2.png');" aria-label="Descripción de la imagen 3"></div>
-                    <div class="grid-item-4" style="background-image: url('assets/fuga/Fotograma_Fuga_3.png');" aria-label="Descripción de la imagen 4"></div>
+                    <div class="grid-item-1" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Cartel_Fuga.jpg" style="background-image: url('assets/fuga/Cartel_Fuga.jpg');" aria-label="Descripción de la imagen 1" role="button"></div>
+                    <div class="grid-item-2" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Fotograma_Fuga_1.png" style="background-image: url('assets/fuga/Fotograma_Fuga_1.png');" aria-label="Descripción de la imagen 2" role="button"></div>
+                    <div class="grid-item-3" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Fotograma_Fuga_2.png" style="background-image: url('assets/fuga/Fotograma_Fuga_2.png');" aria-label="Descripción de la imagen 3" role="button"></div>
+                    <div class="grid-item-4" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Fotograma_Fuga_3.png" style="background-image: url('assets/fuga/Fotograma_Fuga_3.png');" aria-label="Descripción de la imagen 4" role="button"></div>
                 </div>
             </div>
         </div>
@@ -328,10 +328,10 @@
 
             <div class="container-fluid pb-4">
                 <div class="gallery-grid-2">
-                    <div class="grid-item-1" style="background-image: url('assets/fuga/Making_Fuga_1.jpg');" aria-label="Descripción de la imagen 1"></div>
-                    <div class="grid-item-2" style="background-image: url('assets/fuga/Making_Fuga_2.jpg');" aria-label="Descripción de la imagen 2"></div>
-                    <div class="grid-item-3" style="background-image: url('assets/fuga/Making_Fuga_4.jpg');" aria-label="Descripción de la imagen 3"></div>
-                    <div class="grid-item-4" style="background-image: url('assets/fuga/Making_Fuga_3.jpg');" aria-label="Descripción de la imagen 4"></div>
+                    <div class="grid-item-1" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_1.jpg" style="background-image: url('assets/fuga/Making_Fuga_1.jpg');" aria-label="Descripción de la imagen 1" role="button"></div>
+                    <div class="grid-item-2" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_2.jpg" style="background-image: url('assets/fuga/Making_Fuga_2.jpg');" aria-label="Descripción de la imagen 2" role="button"></div>
+                    <div class="grid-item-3" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_4.jpg" style="background-image: url('assets/fuga/Making_Fuga_4.jpg');" aria-label="Descripción de la imagen 3" role="button"></div>
+                    <div class="grid-item-4" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_3.jpg" style="background-image: url('assets/fuga/Making_Fuga_3.jpg');" aria-label="Descripción de la imagen 4" role="button"></div>
                 </div>
             </div>
 
@@ -379,15 +379,6 @@
     </section>
 
 
-<div class="container-fluid pb-4">
-    <div class="gallery-grid-2">
-        <div class="grid-item-1" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_1.jpg" style="background-image: url('assets/fuga/Making_Fuga_1.jpg');" aria-label="Descripción de la imagen 1" role="button"></div>
-        <div class="grid-item-2" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_2.jpg" style="background-image: url('assets/fuga/Making_Fuga_2.jpg');" aria-label="Descripción de la imagen 2" role="button"></div>
-        <div class="grid-item-3" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_4.jpg" style="background-image: url('assets/fuga/Making_Fuga_4.jpg');" aria-label="Descripción de la imagen 3" role="button"></div>
-        <div class="grid-item-4" data-bs-toggle="modal" data-bs-target="#galleryModal" data-image-src="assets/fuga/Making_Fuga_3.jpg" style="background-image: url('assets/fuga/Making_Fuga_3.jpg');" aria-label="Descripción de la imagen 4" role="button"></div>
-    </div>
-</div>
-
 <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content bg-transparent border-0">
@@ -412,30 +403,27 @@
         var modalLegend = document.getElementById('modalLegend');
         var modalFooter = document.querySelector('#galleryModal .modal-footer');
 
-        document.querySelectorAll('.gallery-grid-2 div[data-bs-toggle="modal"]').forEach(item => {
+        document.querySelectorAll('.gallery-grid-1 div, .gallery-grid-2 div, .gallery-grid-3 div, .gallery-grid-4 div').forEach(item => {
             item.addEventListener('click', event => {
                 const imageSrc = event.currentTarget.getAttribute('data-image-src');
                 const imageLegend = event.currentTarget.getAttribute('aria-label');
                 
                 modalImage.src = imageSrc;
 
-                // Si el texto de la leyenda existe, lo muestra
                 if (imageLegend) {
                     modalLegend.textContent = imageLegend;
-                    modalFooter.style.display = 'block'; // Muestra el footer
+                    modalFooter.style.display = 'block';
                 } else {
-                    // Si no, lo oculta
                     modalLegend.textContent = '';
-                    modalFooter.style.display = 'none'; // Oculta el footer
+                    modalFooter.style.display = 'none';
                 }
             });
         });
 
-        // Limpia los valores cuando el modal se cierra para prepararlo para la próxima vez
         myModal.addEventListener('hidden.bs.modal', function() {
             modalImage.src = '';
             modalLegend.textContent = '';
-            modalFooter.style.display = 'block'; // Vuelve a mostrar el footer por si acaso
+            modalFooter.style.display = 'block';
         });
     });
 </script>
