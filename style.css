@@ -142,9 +142,8 @@ body {
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    object-fit: cover;
+    object-fit: cover; /* Mantén esta propiedad solo para escritorio */
     z-index: -1;
-    object-position: 50% 50%;
 }
 
 /* Contenedor de las imágenes PNG superpuestas */
@@ -157,6 +156,7 @@ body {
     display: flex;
     gap: 15px;
     align-items: flex-end;
+    z-index: 2;
 }
 
 .award-images-overlay .award-icon {
@@ -213,46 +213,49 @@ body {
 }
 
 /* ## MEDIA QUERIES PARA ADAPTACIÓN A MÓVILES ## */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     
     /* Hero (Video) */
     .hero-video-container {
-        height: 100vw; /* Esto creará un contenedor cuadrado */
+        /* Para un video 1:1, la altura debe ser igual al ancho para un contenedor cuadrado */
+
+        width: 100vw;
     }
 
     .hero-video {
-        object-fit: contain; /* El video se ajustará sin ser recortado */
-        /* Puedes eliminar object-position, ya que no será necesaria */
+        /* object-fit: contain ajusta el video para que se vea completo, sin recortarlo */
+        object-fit: contain;
+        /* Elimina la propiedad object-position en la media query para móviles */
     }
 
     /* ... otros estilos para móviles ... */
 }
 
-    /* Logo principal */
-    .hero-logo {
-        max-width: 80%; /* Logo más grande en móviles */
-    }
+/* Logo principal */
+.hero-logo {
+    max-width: 80%; /* Logo más grande en móviles */
+}
 
-    /* Awards */
-    .award-images-overlay {
-        bottom: 10px; /* Bajar los awards para que no se choquen con el logo */
-        gap: 10px; /* Menos espacio entre los iconos */
-    }
+/* Awards */
+.award-images-overlay {
+    bottom: 10px; /* Bajar los awards para que no se choquen con el logo */
+    gap: 10px; /* Menos espacio entre los iconos */
+    z-index: 2;
+}
 
-    .award-images-overlay .award-icon {
-        max-width: 75px; /* Iconos más pequeños para que quepan bien */
-    }
+.award-images-overlay .award-icon {
+    max-width: 75px; /* Iconos más pequeños para que quepan bien */
+}
 
-    /* Contacto */
-    .contact-section {
-        height: 80vh; /* Aumenta la altura para que el contenido se vea mejor en vertical */
-    }
+/* Contacto */
+.contact-section {
+    height: 80vh; /* Aumenta la altura para que el contenido se vea mejor en vertical */
+}
 
-    .contact-section::before {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
-    }
+.contact-section::before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
+}
 
-    .contact-content {
-        padding: 2rem 1rem; /* Añade espacio interior en móviles */
-    }
+.contact-content {
+    padding: 2rem 1rem; /* Añade espacio interior en móviles */
 }
